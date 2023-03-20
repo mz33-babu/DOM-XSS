@@ -21,7 +21,9 @@ Here is an example of how DOM based XSS can be exploited:
 In this example, the attacker can inject a script that will be executed by the victim's browser. For example, the attacker can inject the following script:
 
 ```javascript
-<script>alert("You have been hacked!");</script>
+<script>
+  alert("You have been hacked!");
+</script>
 ```
 
 If the input field is not properly sanitized by the application, the injected script will be executed by the victim's browser, and the user will be presented with an alert message that says "You have been hacked!".
